@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "413888222300",
+    "project_id": "lista-de-tareas-a3cb9",
+    "storage_bucket": "lista-de-tareas-a3cb9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413888222300:android:0896e0de26f816a9508299",
+        "android_client_info": {
+          "package_name": "com.example.lista_de_tareas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6puLGg2A810AMhAhPbSKlTa55fxKq9-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
