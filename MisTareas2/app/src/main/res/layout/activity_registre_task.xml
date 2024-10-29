@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/taskName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la tarea"/>
+
+    <EditText
+        android:id="@+id/taskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción"/>
+
+    <EditText
+        android:id="@+id/taskDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha"/>
+
+    <EditText
+        android:id="@+id/taskPriority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Prioridad"/>
+
+    <EditText
+        android:id="@+id/taskCost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Coste"/>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Añadir"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>
