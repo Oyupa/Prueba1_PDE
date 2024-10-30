@@ -1,10 +1,10 @@
 package com.example.mistareas2
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.LinearLayout
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 
 class DetailsActivity : ComponentActivity() {
     private lateinit var taskName: TextView
@@ -15,26 +15,16 @@ class DetailsActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            // Configura el diseño de LinearLayout
-            val linearLayout = LinearLayout(this)
-            linearLayout.orientation = LinearLayout.VERTICAL
+        setContentView(R.layout.activity_details)
 
-            taskName = TextView(this)
-            taskDescription = TextView(this)
-            taskDate = TextView(this)
-            taskPriority = TextView(this)
-            taskCost = TextView(this)
+        // Inicializa las vistas
+        taskName = findViewById(R.id.taskName)
+        taskDescription = findViewById(R.id.taskDescription)
+        taskDate = findViewById(R.id.taskDate)
+        taskPriority = findViewById(R.id.taskPriority)
+        taskCost = findViewById(R.id.taskCost)
 
-            linearLayout.addView(taskName)
-            linearLayout.addView(taskDescription)
-            linearLayout.addView(taskDate)
-            linearLayout.addView(taskPriority)
-            linearLayout.addView(taskCost)
-
-            setContentView(linearLayout)
-        }
-
+        // Obtén los datos del intent y asigna los valores a las vistas
         val extras = intent.extras
         extras?.let {
             taskName.text = "Nombre: ${it.getString("task_name")}"
@@ -42,6 +32,13 @@ class DetailsActivity : ComponentActivity() {
             taskDate.text = "Fecha: ${it.getString("task_date")}"
             taskPriority.text = "Prioridad: ${it.getString("task_priority")}"
             taskCost.text = "Coste: ${it.getString("task_cost")}"
+        }
+
+        // Configura el botón para volver a MainActivity
+        val btnBackToMain = findViewById<Button>(R.id.btnBackToMain)
+        btnBackToMain.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }
